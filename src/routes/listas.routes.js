@@ -1,11 +1,14 @@
 import { Router } from "express";
-import { obtenerLista, crearLista } from "../controllers/listas.controllers.js";
+import { crearTarea, borrarTarea, obtenerTareas } from "../controllers/listas.controllers.js";
 
 
 const router = Router();
 
 
-router.route('/obtener-lista').get(obtenerLista)
-router.route('/crear-lista').post(crearLista)
+
+router.route('/crear-tarea').post(crearTarea)
+router.route('/mostrar-tareas').get(obtenerTareas)
+router.route('/borrar-tarea/:id').delete(borrarTarea)
+
 
 export default router;
