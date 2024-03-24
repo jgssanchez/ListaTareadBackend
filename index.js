@@ -5,6 +5,7 @@ import morgan from "morgan";
 import path from "path";
 import { fileURLToPath } from "url";
 import router from "./src/routes/listas.routes.js";
+import './src/database/database.js'
 
 const app = express();
 app.set("port", process.env.PORT || 4002);
